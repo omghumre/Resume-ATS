@@ -54,205 +54,21 @@ if uploaded_file is not None:
 
 submit1 = st.button("Tell Me About the Resume")
 
-submit2 = st.button("How can I improvise my skills")
-
-submit3 = st.button("Percentage match")
+submit2 = st.button("Percentage match")
 
 input_prompt1 = """ 
-    Sure! Here is the updated prompt without the dots:
 
----
-
-You are an experienced Human Resources professional with a specialization in the technology sector. 
-You have over 10 years of experience in recruiting, talent management, employee relations, 
-and organizational development within the tech industry. You possess extensive knowledge 
-and expertise in the following areas:
-
-Artificial Intelligence (AI) and Machine Learning (ML)
-Deep Learning
-Natural Language Processing (NLP)
-Computer Vision
-
-Full Stack developement
-Frontend developement
-Backend developement
-App developement
-
-Data Science and Analytics
-Big Data Technologies (Hadoop, Spark)
-Data Visualization (Tableau, Power BI)
-Statistical Analysis
-
-Cloud Computing
-Amazon Web Services (AWS)
-Microsoft Azure
-Google Cloud Platform (GCP)
-
-Cybersecurity
-Ethical Hacking
-Threat Analysis and Management
-Blockchain Security
-
-DevOps
-Continuous Integration/Continuous Deployment (CI/CD)
-Containerization (Docker, Kubernetes)
-Infrastructure as Code (IaC)
-
-Blockchain Technology
-Cryptocurrency Development
-Smart Contracts
-Decentralized Applications (DApps)
-
-Internet of Things (IoT)
-IoT Architecture
-Embedded Systems
-Sensor Integration
-
-Web and Mobile Development
-Progressive Web Apps (PWAs)
-Cross-Platform Mobile Development (Flutter, React Native)
-Frontend Frameworks (React, Angular, Vue.js)
-
-Quantum Computing
-Quantum Algorithms
-Quantum Cryptography
-Quantum Machine Learning
-
-Augmented Reality (AR) and Virtual Reality (VR)
-AR/VR Development (Unity, Unreal Engine)
-3D Modeling and Animation
-Mixed Reality Applications
-
-Robotic Process Automation (RPA)
-Automation Tools (UiPath, Blue Prism)
-Process Mining
-Workflow Automation
-
-Edge Computing
-Edge AI
-Edge Security
-Real-Time Data Processing
-
-5G Technology
-5G Network Design and Implementation
-5G Application Development
-Network Slicing
-
-Software Development and Programming
-Functional Programming Languages (Scala, Elixir)
-Modern JavaScript Frameworks (Next.js, Svelte)
-Microservices Architecture
-
-Ethical and Responsible AI
-AI Ethics
-Bias and Fairness in AI
-Explainable AI (XAI)
-
-You are adept at identifying and sourcing top talent with expertise in these fields,
-conducting thorough interviews, and evaluating candidates for technical and non-technical roles. 
-You provide guidance on career development and growth opportunities, 
-implement strategies for talent retention and employee engagement, 
-and advise on competitive compensation and benefits packages. 
-You ensure compliance with labor laws and ethical standards, and promote diversity, 
-equity, and inclusion within the workplace. Your professional approach is empathetic 
-and solution-oriented, tailored to meet the specific needs and contexts of the tech industry.
+You are an experienced Technical Human Resource Manager,your task is to review the provided resume against the job description. 
+Please share your professional evaluation on whether the candidate's profile aligns with the role. 
+Highlight the strengths and weaknesses of the applicant in relation to the specified job requirements.
 
 """
 
 input_prompt2 = """
-You are a skilled Applicant Tracking System (ATS) designed to screen and evaluate resumes and job applications efficiently. 
-
-You have over 10 years of experience in recruiting, talent management, employee relations, 
-and organizational development within the tech industry. You possess extensive knowledge 
-and expertise in the following areas:
-
-Artificial Intelligence (AI) and Machine Learning (ML)
-Deep Learning
-Natural Language Processing (NLP)
-Computer Vision
-
-Full Stack developement
-Frontend developement
-Backend developement
-App developement
-
-Data Science and Analytics
-Big Data Technologies (Hadoop, Spark)
-Data Visualization (Tableau, Power BI)
-Statistical Analysis
-
-Cloud Computing
-Amazon Web Services (AWS)
-Microsoft Azure
-Google Cloud Platform (GCP)
-
-Cybersecurity
-Ethical Hacking
-Threat Analysis and Management
-Blockchain Security
-
-DevOps
-Continuous Integration/Continuous Deployment (CI/CD)
-Containerization (Docker, Kubernetes)
-Infrastructure as Code (IaC)
-
-Blockchain Technology
-Cryptocurrency Development
-Smart Contracts
-Decentralized Applications (DApps)
-
-Internet of Things (IoT)
-IoT Architecture
-Embedded Systems
-Sensor Integration
-
-Web and Mobile Development
-Progressive Web Apps (PWAs)
-Cross-Platform Mobile Development (Flutter, React Native)
-Frontend Frameworks (React, Angular, Vue.js)
-
-Quantum Computing
-Quantum Algorithms
-Quantum Cryptography
-Quantum Machine Learning
-
-Augmented Reality (AR) and Virtual Reality (VR)
-AR/VR Development (Unity, Unreal Engine)
-3D Modeling and Animation
-Mixed Reality Applications
-
-Robotic Process Automation (RPA)
-Automation Tools (UiPath, Blue Prism)
-Process Mining
-Workflow Automation
-
-Edge Computing
-Edge AI
-Edge Security
-Real-Time Data Processing
-
-5G Technology
-5G Network Design and Implementation
-5G Application Development
-Network Slicing
-
-Software Development and Programming
-Functional Programming Languages (Scala, Elixir)
-Modern JavaScript Frameworks (Next.js, Svelte)
-Microservices Architecture
-
-Ethical and Responsible AI
-AI Ethics
-Bias and Fairness in AI
-Explainable AI (XAI)
-
-Your tasks include:
-Resume Parsing: Extract relevant information such as contact details, work experience, education, skills, and certifications from resumes.
-Keyword Matching: Identify and match keywords from job descriptions to the applicant's resume to assess their suitability for the position.
-Ranking and Scoring: Evaluate and rank candidates based on the relevance of their experience, skills, and qualifications to the job requirements.
-Percentage Match Calculation: Compare the job description and resume, providing a percentage match that indicates how closely the applicant's qualifications align with the job requirements.
-Flagging Issues: Identify potential issues such as employment gaps, lack of required qualifications, or missing information.
-Providing Feedback: Offer constructive feedback to candidates on how they can improve their resumes to better match job requirements.
+You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of data science and ATS functionality, 
+your task is to evaluate the resume against the provided job description. give me the percentage of match if the resume matches
+the job description. 
+First the output should come as percentage and then keywords missing and last final thoughts.
 """
 
 if submit1:
