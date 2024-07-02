@@ -46,7 +46,7 @@ def input_pdf_setup(uploaded_file):
 
 st.set_page_config(page_title="ATS Resume Expert")
 st.header("ATS Tracking system")
-input_test = st.text_area("Job Description: ",key="input")
+input_text = st.text_area("Job Description: ",key="input")
 uploaded_file = st.file_uploader("Upload your resume(PDF)...",type=["pdf"])
 
 if uploaded_file is not None:
@@ -255,3 +255,22 @@ Flagging Issues: Identify potential issues such as employment gaps, lack of requ
 Providing Feedback: Offer constructive feedback to candidates on how they can improve their resumes to better match job requirements.
 """
 
+if submit1:
+    if uploaded_file is not None:
+        pdf_content = input_pdf_setup(uploaded_file)
+        response = get_gemini_response(input_prompt1, pdf_content, input_text)
+
+        st.subheader("The Response is")
+        st.write(response)
+    else:
+        st.write("Please upload the resume")
+
+elif submit2:
+    if uploaded_file is not None:
+        pdf_content = input_pdf_setup(uploaded_file)
+        response = get_gemini_response(input_prompt2, pdf_content, input_text)
+
+        st.subheader("The Response is")
+        st.write(response)
+    else:
+        st.write("Please upload the resume")
